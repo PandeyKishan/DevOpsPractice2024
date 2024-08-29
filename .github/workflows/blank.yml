@@ -6,7 +6,7 @@ name: SimpleCICD
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,3 +32,9 @@ jobs:
 
       - name: create new file
         run: touch field.txt
+
+      - name: list the files
+        run: ls
+
+      - name: create directory
+        run: mkdir dir
